@@ -1,0 +1,5 @@
+.ListItemContent {
+    display: flex;
+    position: relative;
+    height: 100%;
+}

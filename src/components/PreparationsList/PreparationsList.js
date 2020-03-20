@@ -18,13 +18,17 @@ class PreparationsListContainer extends React.Component {
             <section className={'PreparationsList'}>
                 <h2>Preparations</h2>
                 <div className={'PreparationsList-List'}>
-                    {preparations.map(preparation => {
-                        return (
-                            <PreparationsListItem link={`/preparations/${preparation.id}`}>
-
-                            </PreparationsListItem>
-                        );
-                    })}
+                    {preparations.map(({ id, name, smallImage, producer, activeSubstances, isPrescription }) => (
+                        <PreparationsListItem
+                            link={`/preparations/${id}`}
+                            name={name}
+                            src={smallImage}
+                            producer={producer}
+                            activeSubstances={activeSubstances}
+                            isPrescription={isPrescription}
+                            key={id}
+                        />
+                    ))}
                 </div>
             </section>
         );

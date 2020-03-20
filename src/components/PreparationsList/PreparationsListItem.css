@@ -43,3 +43,7 @@
 .PreparationsListItem .PreparationsListItem-ActiveSubstance:hover {
     text-decoration: underline;
 }
+
+.PreparationsListItem .PreparationsListItem-Label {
+    margin-top: 10px;
+}

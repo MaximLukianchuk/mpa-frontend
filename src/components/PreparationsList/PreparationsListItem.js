@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ListItem } from '../ListItem/ListItem';
 import { ListItemContent } from '../ListItemContent/ListItemContent';
 import { Image } from '../Image/Image';
+import { Label } from '../Label/Label';
 
 import './PreparationsListItem.css';
 
@@ -39,6 +40,12 @@ export const PreparationsListItem = ({
                         </Link>
                     ))}
                 </div>
+                {isPrescription &&
+                <Label
+                    className='PreparationsListItem-Label'
+                    type='attention'
+                    text='Рецептурный препарат'
+                />}
             </div>
         </ListItemContent>
     </ListItem>

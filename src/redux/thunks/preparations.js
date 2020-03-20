@@ -52,7 +52,7 @@ export const get = (range) => {
                     'Бензилдиметил [3-(миристоиламино)пропил] аммоний хлорид моногидрат',
                     'Бензилпенициллин прокаина'
                 ],
-                isPrescription: true
+                isPrescription: false
             }
         ]
 

@@ -1,0 +1,45 @@
+/* Переопределяем стили semantic-ui */
+.PreparationsListItem .PreparationsListItem-ListItemContent .PreparationsListItem-Image {
+    height: 125px;
+    width: 125px;
+    min-width: 125px;
+}
+
+.PreparationsListItem .PreparationsListItem-Header {
+    position: relative;
+    margin: 0;
+    font-weight: normal;
+    font-size: large;
+    color: #0b64a8;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.PreparationsListItem .PreparationsListItem-Header:hover {
+    text-decoration: underline;
+}
+
+.PreparationsListItem .PreparationsListItem-Info {
+    margin: 0 0 0 25px;
+}
+
+.PreparationsListItem .PreparationsListItem-Info span {
+    display: block;
+}
+
+.PreparationsListItem .PreparationsListItem-ActiveSubstanceWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.PreparationsListItem .PreparationsListItem-ActiveSubstance {
+    max-width: max-content;
+    position: relative;
+    color: #0b64a8;
+    font-weight: bolder;
+    z-index: 3;
+}
+
+.PreparationsListItem .PreparationsListItem-ActiveSubstance:hover {
+    text-decoration: underline;
+}

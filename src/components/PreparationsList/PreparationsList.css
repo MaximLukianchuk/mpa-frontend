@@ -1,0 +1,11 @@
+.PreparationsList {
+
+}
+
+.PreparationsList .PreparationsList-List {
+    max-width: 720px;
+}
+
+.PreparationsList-List .ListItem {
+    margin: 20px 0 20px 30px;
+}

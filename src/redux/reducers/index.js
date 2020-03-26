@@ -4,6 +4,7 @@ import draft from './draft';
 import patient from './patient';
 import patients from './patients';
 import preparations from './preparations';
+import preparation from './preparation';
 import nextStates from './nextStates';
 import disease from './disease';
 import diseases from './diseases';
@@ -17,6 +18,7 @@ export default combineReducers({
     patient,
     patients,
     preparations,
+    preparation,
     nextStates,
     disease,
     diseases,

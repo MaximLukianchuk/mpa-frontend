@@ -7,8 +7,8 @@ import './Label.css';
 export const Label = ({ type, text, className, ...props }) => {
     return (
         <div className={cn(className, 'Label')}>
-            <Icon name={type}/>
-            <span>{text}</span>
+            <Icon className='Label-Icon' name={type} {...props}/>
+            <span className='Label-Text'>{text}</span>
         </div>
     );
 };

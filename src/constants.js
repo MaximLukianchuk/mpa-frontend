@@ -1,6 +1,7 @@
 import { PatientsList } from './components/PatientsList/PatientsList';
 import { Patient } from './components/Patient/Patient';
 import { PreparationsList } from './components/PreparationsList/PreparationsList';
+import { Preparation } from './components/Preparation/Preparation';
 import { Associations } from './components/Associations/Associations';
 import { CurrentState } from './components/CurrentState/CurrentState';
 import { States } from './components/States/States';
@@ -29,17 +30,17 @@ export const headerRoutes = [
         path: '/preparations',
         component: PreparationsList,
         exact: true
-    }
+    },
     // {
     //     name: 'Добавить препарат',
     //     path: '/preparations/new',
     //     component: PatientsList,
     //     exact: true
     // },
-    // {
-    //     path: '/preparations/:preparationId',
-    //     component: Patient
-    // }
+    {
+        path: '/preparations/:preparationId',
+        component: Preparation
+    }
 ];
 
 export const sidebarRoutes = [

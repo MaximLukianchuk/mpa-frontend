@@ -1,0 +1,49 @@
+.SearchPanel {
+    height: 150px;
+    max-width: 720px;
+    background-color: #EAECEE;
+    border: 1px solid #FAFAFA;
+    border-radius: 12px;
+    padding: 10px 15px 50px 15px;
+}
+
+.SearchPanel .SearchPanel-Form {
+    position: relative;
+    height: 100%;
+    border-color: #EAECEE;
+}
+
+.SearchPanel .SearchPanel-Submit {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    background-color: #BDBEC0;
+}
+
+.SearchPanel .SearchPanel-Submit:hover {
+    background-color: #A8A9AD;
+}
+
+.SearchPanel .SearchPanel-Filters .Filters-Element {
+    width: max-content;
+    margin: 5px 0;
+}
+
+.SearchPanel .SearchPanel-Filters {
+    display: flex;
+    flex-direction: column;
+}
+
+.SearchPanel .SearchPanel-Search {
+    margin-bottom: 10px;
+}
+
+.SearchPanel .SearchPanel-Filters .Filters-ForReceipt {
+    margin-right: 6px;
+}
+
+.SearchPanel .SearchPanel-Filters .Filters-Mnn {
+    margin-left: 6px;
+    display: inline-block;
+    width: 150px;
+}

@@ -33,7 +33,7 @@ export const PreparationsListItem = ({
                     {activeSubstances.map((el, i) => (
                         <Link
                             className='PreparationsListItem-ActiveSubstance'
-                            to={`/preparations?activeSubstances=${el}`}
+                            to={`/preparations?mnn=${el}`}
                             key={i}
                         >
                             {el}

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { PreparationsListItem } from './PreparationsListItem';
+import { SearchPanel } from '../SearchPanel/SearchPanel';
 import * as preparationsThunks from '../../redux/thunks/preparations';
 
 import './PreparationsList.css';
@@ -15,9 +16,13 @@ class PreparationsListContainer extends React.Component {
         const { preparations } = this.props;
 
         return (
-            <section className={'PreparationsList'}>
+            <section className='PreparationsList'>
                 <h2>Preparations</h2>
-                <div className={'PreparationsList-List'}>
+                <SearchPanel
+                    className='PreparationsList-SearchPanel'
+                    allowedParams={['search', 'mnn', 'forReceipt']}
+                />
+                <div className='PreparationsList-List'>
                     {preparations.map(({ id, name, smallImage, producer, activeSubstances, isPrescription }) => (
                         <PreparationsListItem
                             link={`/preparations/${id}`}

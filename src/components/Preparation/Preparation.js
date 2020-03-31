@@ -9,7 +9,6 @@ import './Preparation.css';
 
 class PreparationContainer extends React.PureComponent {
     componentDidMount () {
-        console.log(this.props.location.search);
         this.props.getPreparation(this.props.match.params.preparationId);
     }
 
@@ -30,6 +29,7 @@ class PreparationContainer extends React.PureComponent {
                     producer={preparation.producer}
                     activeSubstances={preparation.activeSubstances}
                     isPrescription={preparation.isPrescription}
+                    additionalProperties={preparation.additionalProperties}
                 />
             </section>);
     }

@@ -15,3 +15,21 @@
     width: 100%;
     padding: 10px;
 }
+
+.PreparationInfo .PreparationInfo-Table {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.PreparationInfo .PreparationInfo-Image {
+    /* Переопределяем библиотечные стили */
+    height: 300px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .PreparationInfo .PreparationInfo-Image {
+        /* Переопределяем библиотечные стили */
+        display: none !important;
+    }
+}

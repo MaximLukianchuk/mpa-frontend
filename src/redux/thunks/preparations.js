@@ -1,9 +1,9 @@
 import * as actionCreaters from '../reducers/preparations';
-//import * as service from '../../Services/preparationService';
+import * as service from '../../Services/preparationService';
 
-export const get = (range) => {
+export const get = () => {
     return async dispatch => {
-        // const preparations = await service.getPreparations(range);
+        // const preparations = await service.getPreparations();
         const preparations = [
             {
                 id: 1,

@@ -1,24 +1,42 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
+import { PreparationTable } from './PreparationTable';
 import { Image } from '../Image/Image';
 import { Label } from '../Label/Label';
+import { splitProperties } from '../../utils';
 
 import './PreparationInfo.css';
+import { PreparationAdditionalInfo } from './PreparationAdditionalInfo';
 
 export const PreparationInfo = ({
     name,
     producer,
     activeSubstances,
-    isPrescription
-}) => (
-    <div className='PreparationInfo'>
-        <h1 className='PreparationInfo-Header'>{name}</h1>
-        {isPrescription && <Label
-            className='PreparationInfo-Label'
-            type='attention'
-            text='Рецептурный препарат'
-            size='big'
-        />}
-    </div>
-);
+    isPrescription,
+    additionalProperties
+}) => {
+    const [additionalInfoLarge, additionalInfoSmall] = splitProperties(additionalProperties, 40);
+
+    return (
+        <div className='PreparationInfo'>
+            <h1 className='PreparationInfo-Header'>{name}</h1>
+            {isPrescription && <Label
+                className='PreparationInfo-Label'
+                type='attention'
+                text='Рецептурный препарат'
+                size='big'
+            />}
+            <div className='PreparationInfo-Table'>
+                <PreparationTable
+                    producer={producer}
+                    activeSubstances={activeSubstances}
+                    additionalInfoSmall={additionalInfoSmall}
+                />
+                <Image className='PreparationInfo-Image' src={''} size='medium' withPlaceholder />
+            </div>
+            {additionalInfoLarge && <PreparationAdditionalInfo
+                additionalInfoLarge={additionalInfoLarge}
+            />}
+        </div>
+    );
+};

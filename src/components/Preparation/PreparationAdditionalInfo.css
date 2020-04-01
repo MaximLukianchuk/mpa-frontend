@@ -10,4 +10,16 @@
     font-weight: normal;
     text-transform: initial;
     font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.PreparationAdditionalInfo .PreparationAdditionalInfo-Element {
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 640px), screen and (max-device-width: 640px) and (orientation: portrait) {
+    .PreparationAdditionalInfo .PreparationAdditionalInfo-Title {
+        font-size: 18px;
+        margin: 0;
+    }
 }

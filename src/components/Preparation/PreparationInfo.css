@@ -14,6 +14,7 @@
     font-size: 25px;
     width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .PreparationInfo .PreparationInfo-Table {
@@ -23,13 +24,28 @@
 }
 
 .PreparationInfo .PreparationInfo-Image {
-    /* Переопределяем библиотечные стили */
     height: 300px !important;
+    width: 300px !important;
+    min-width: 300px !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 641px) and (max-width: 1024px), screen and (min-device-width: 641px) and (max-device-width: 1024px) {
     .PreparationInfo .PreparationInfo-Image {
-        /* Переопределяем библиотечные стили */
-        display: none !important;
+        height: 150px !important;
+        width: 150px !important;
+        min-width: 150px !important;
+    }
+}
+
+@media screen and (max-width: 640px), screen and (max-device-width: 640px) and (orientation: portrait) {
+    .PreparationInfo .PreparationInfo-Image {
+        height: 250px !important;
+        width: 250px !important;
+        min-width: 250px !important;
+        margin: auto;
+    }
+
+    .PreparationInfo {
+        text-align: center;
     }
 }

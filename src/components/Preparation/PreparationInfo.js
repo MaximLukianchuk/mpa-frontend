@@ -2,6 +2,7 @@ import React from 'react';
 
 import { PreparationTable } from './PreparationTable';
 import { Image } from '../Image/Image';
+import { Breakpoint } from '../Breakpoint/Breakpoint';
 import { Label } from '../Label/Label';
 import { splitProperties } from '../../utils';
 
@@ -26,17 +27,25 @@ export const PreparationInfo = ({
                 text='Рецептурный препарат'
                 size='big'
             />}
-            <div className='PreparationInfo-Table'>
-                <PreparationTable
-                    producer={producer}
-                    activeSubstances={activeSubstances}
-                    additionalInfoSmall={additionalInfoSmall}
-                />
-                <Image className='PreparationInfo-Image' src={''} size='medium' withPlaceholder />
-            </div>
-            {additionalInfoLarge && <PreparationAdditionalInfo
-                additionalInfoLarge={additionalInfoLarge}
-            />}
+            <Breakpoint desktop tablet>
+                <div className='PreparationInfo-Table'>
+                    <PreparationTable
+                        producer={producer}
+                        activeSubstances={activeSubstances}
+                        additionalInfoSmall={additionalInfoSmall}
+                    />
+                    <Image className='PreparationInfo-Image' src={''} size='medium' withPlaceholder />
+                </div>
+                {<PreparationAdditionalInfo
+                    additionalInfoLarge={additionalInfoLarge}
+                />}
+            </Breakpoint>
+            <Breakpoint mobile>
+                <Image className='PreparationInfo-Image' src={''} size='small' withPlaceholder />
+                {<PreparationAdditionalInfo
+                    additionalInfoLarge={{ ...additionalInfoSmall, ...additionalInfoLarge }}
+                />}
+            </Breakpoint>
         </div>
     );
 };
